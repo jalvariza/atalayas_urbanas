@@ -1,0 +1,732 @@
+@charset "UTF-8";
+/*COLORS*/
+/*MARGIN*/
+/*PADDING*/
+/*ALINEACIÓN*/
+/*TRANSFORMS, TRANSITIONS AND ANIMATIONS*/
+.fade-in {
+  animation: fade-in;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*TYPOGRAPHY*/
+.logo {
+  font-family: "Platypi", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 110%;
+  color: #2C4122;
+}
+
+.caption {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 120%;
+  font-variant: small-caps;
+  color: #0A1207;
+  text-align: left;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 140%;
+  color: #0A1207;
+  text-align: left;
+  margin-bottom: 0%;
+}
+
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 120%;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 120%;
+}
+
+h4 {
+  font-family: "Platypi", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 120%;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 3.25rem;
+  line-height: 120%;
+}
+
+h2 {
+  font-family: "Platypi", sans-serif;
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 110%;
+  color: #0A1207;
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+h1 {
+  font-family: "Platypi", sans-serif;
+  font-weight: 300;
+  font-size: 5.5rem;
+  line-height: 105%;
+  color: #0A1207;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  color: #2C4122;
+  text-decoration: none;
+}
+a:hover {
+  font-weight: 600;
+}
+a:active {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-skip-ink: ink spaces;
+  text-decoration-thickness: 6px;
+  text-decoration-color: #F2FF57;
+  text-underline-offset: 0rem;
+}
+
+.aActive {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 120%;
+  color: #2C4122;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 6px;
+  text-decoration-color: #F2FF57;
+  text-underline-offset: 0rem;
+}
+
+.strong {
+  font-weight: 800;
+}
+
+span {
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-thickness: 6px;
+  text-decoration-color: #F2FF57;
+  text-decoration-skip-ink: none;
+}
+
+/*ICONS*/
+i {
+  color: #2C4122;
+}
+i:hover {
+  font-weight: 700;
+}
+
+/*COMPONENTS*/
+/*BUTTONS*/
+.buttonPrimary {
+  background-color: #2C4122;
+  color: #F2FF57;
+  border: 1px solid #2C4122;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.buttonPrimary:hover {
+  background-color: #F2FF57;
+  color: #2C4122;
+  border: 1px solid #2C4122;
+}
+
+.buttonSecondary {
+  background-color: #EDF3EE;
+  color: #2C4122;
+  border: 1px solid #2C4122;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.buttonSecondary:hover {
+  background-color: #EBEBE0;
+  color: #223A3F;
+  border: 1px solid #223A3F;
+}
+
+.form-control {
+  background-color: #EDF3EE;
+  border: 1px solid #2C4122;
+  border-radius: 2px;
+}
+
+.form-control:hover {
+  background-color: #EBEBE0;
+  border: 1px solid #2C4122;
+}
+
+.form-control:focus {
+  border: 1px solid #2C4122;
+  box-shadow: 0px 0px 0px 3px #F2FF57;
+}
+
+/*BODY*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EDF3EE;
+}
+body ul {
+  list-style: none;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+body ul li {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+/*HEADER*/
+.navbar {
+  background-color: #EDF3EE;
+}
+
+/*MAIN*/
+main .title {
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+main .title h1 {
+  text-align: center;
+  color: #2C4122;
+}
+main .herosection {
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-image: url("../img/bgimg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 4px solid #F2FF57;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 24px 24px;
+  grid-auto-flow: row;
+  grid-template-areas: "herosectionText herosectionImage";
+}
+@media (max-width: 576px) {
+  main .herosection {
+    height: auto;
+    padding-top: 6rem;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    grid-template-areas: "herosectionText" "herosectionImage";
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  main .herosection {
+    height: auto;
+    padding-top: 6rem;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    grid-template-areas: "herosectionText" "herosectionImage";
+  }
+}
+main .herosectionText {
+  grid-area: herosectionText;
+  align-items: center;
+  row-gap: 2rem;
+}
+main .herosectionText h1 {
+  color: #2C4122;
+}
+main .herosectionText h5 {
+  color: #2C4122;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+main .herosectionImage {
+  grid-area: herosectionImage;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .herosectionImage img {
+  width: 100%;
+}
+main .team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+  gap: 24px 24px;
+  margin-top: 1.5rem;
+  margin-bottom: 4.5rem;
+}
+main .team .integrante {
+  display: grid;
+  width: 100%;
+  background-color: #EBEBE0;
+  padding: 1rem;
+  border: 1px solid #2C4122;
+  border-radius: 2px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto 1fr auto auto;
+  gap: 0px 24px;
+  grid-auto-flow: row;
+  grid-template-areas: "integrantePerfil space space" "integranteNombre integranteNombre integranteNombre" "integranteTitulo integranteTitulo integranteTitulo" "line1 line1 line1" "integranteDescription integranteDescription integranteDescription" "line2 line2 line2" "integranteContact integranteContact integranteCV";
+}
+@media (max-width: 576px) {
+  main .team .integrante {
+    width: 100%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  main .team .integrante {
+    width: 45%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  main .team .integrante {
+    width: 45%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  main .team .integrante {
+    width: 30%;
+  }
+}
+@media (min-width: 1200px) {
+  main .team .integrante {
+    width: 30%;
+  }
+}
+main .team .integrantePerfil {
+  grid-area: integrantePerfil;
+}
+main .team .integrantePerfil .imgperfil {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 0.5rem;
+  border: 1px solid #2C4122;
+  border-radius: 100%;
+  filter: grayscale(100%);
+}
+main .team .space {
+  grid-area: space;
+}
+main .team .integranteNombre {
+  grid-area: integranteNombre;
+}
+main .team .integranteTitulo {
+  grid-area: integranteTitulo;
+}
+main .team .line1 {
+  grid-area: line1;
+}
+main .team .integranteDescription {
+  grid-area: integranteDescription;
+  align-self: stretch;
+}
+main .team .line2 {
+  grid-area: line2;
+}
+main .team .integranteContact {
+  grid-area: integranteContact;
+}
+main .team .integranteCV {
+  grid-area: integranteCV;
+  text-align: right;
+}
+main .seccionEstudiantes {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  background-color: #223A3F;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 24px 24px;
+  grid-auto-flow: row;
+  grid-template-areas: "estudiantesTitle estudiantesTitle estudiantesTitle" "estudiantesTexto listadoEstudiantes listadoEstudiantes" "estudiantesTexto listadoEstudiantes listadoEstudiantes";
+}
+@media (max-width: 576px) {
+  main .seccionEstudiantes {
+    grid-template-areas: "estudiantesTitle estudiantesTitle estudiantesTitle" "estudiantesTexto estudiantesTexto estudiantesTexto" "listadoEstudiantes listadoEstudiantes listadoEstudiantes";
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  main .seccionEstudiantes {
+    grid-template-areas: "estudiantesTitle estudiantesTitle estudiantesTitle" "estudiantesTexto estudiantesTexto estudiantesTexto" "listadoEstudiantes listadoEstudiantes listadoEstudiantes";
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  main .seccionEstudiantes {
+    grid-template-areas: "estudiantesTitle estudiantesTitle estudiantesTitle" "estudiantesTexto estudiantesTexto space" "listadoEstudiantes listadoEstudiantes listadoEstudiantes";
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  main .seccionEstudiantes {
+    grid-template-areas: "estudiantesTitle estudiantesTitle estudiantesTitle" "estudiantesTexto listadoEstudiantes listadoEstudiantes" "estudiantesTexto listadoEstudiantes listadoEstudiantes";
+  }
+}
+@media (min-width: 1200px) {
+  main .seccionEstudiantes {
+    grid-template-areas: "estudiantesTitle estudiantesTitle estudiantesTitle" "estudiantesTexto listadoEstudiantes listadoEstudiantes" "estudiantesTexto listadoEstudiantes listadoEstudiantes";
+  }
+}
+main .seccionEstudiantesTitle {
+  grid-area: estudiantesTitle;
+}
+main .seccionEstudiantesTitle h2 {
+  color: #EBEBE0;
+  margin-bottom: 3rem;
+}
+main .seccionEstudiantesTexto {
+  grid-area: estudiantesTexto;
+}
+main .seccionEstudiantesTexto p {
+  color: #EBEBE0;
+  padding-bottom: 3rem;
+}
+main .listadoEstudiantes {
+  grid-area: listadoEstudiantes;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 24px 24px;
+}
+main .estudiante {
+  display: grid;
+  width: 45%;
+  background-color: #223A3F;
+  padding: 1rem;
+  border: 1px solid #F2FF57;
+  border-radius: 2px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 0px 24px;
+  grid-auto-flow: row;
+  grid-template-areas: "estudiantePerfil space space" "estudianteNombre estudianteNombre estudianteNombre" "estudianteTitulo estudianteTitulo estudianteTitulo" "line3 line3 line3" "estudianteContact estudianteContact estudianteCV";
+  grid-area: estudiante;
+}
+@media (max-width: 576px) {
+  main .estudiante {
+    width: 100%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  main .estudiante {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  main .estudiante {
+    width: 45%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  main .estudiante {
+    width: 45%;
+  }
+}
+@media (min-width: 1200px) {
+  main .estudiante {
+    width: 45%;
+  }
+}
+main .estudiantePerfil {
+  grid-area: estudiantePerfil;
+}
+main .estudiantePerfil .imgPerfilEstudiante {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 0.5rem;
+  border: 1px solid #F2FF57;
+  border-radius: 100%;
+  filter: grayscale(100%);
+}
+main .space {
+  grid-area: space;
+}
+main .estudianteNombre {
+  grid-area: estudianteNombre;
+}
+main .estudianteNombre h4 {
+  color: #F2FF57;
+}
+main .estudianteTitulo {
+  grid-area: estudianteTitulo;
+}
+main .estudianteTitulo p {
+  color: #EBEBE0;
+}
+main .line3 {
+  grid-area: line3;
+}
+main .line3 hr {
+  color: #F2FF57;
+  border-width: 2px;
+}
+main .estudianteContact {
+  grid-area: estudianteContact;
+}
+main .estudianteContact a {
+  color: #EBEBE0;
+}
+main .estudianteCV {
+  grid-area: estudianteCV;
+  text-align: right;
+}
+main .estudianteCV a {
+  color: #EBEBE0;
+}
+main .seccionForm {
+  display: grid;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 3rem;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 24px 24px;
+  grid-auto-flow: row;
+  grid-template-areas: "formText form";
+}
+@media (max-width: 576px) {
+  main .seccionForm {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    grid-template-areas: "formText" "form";
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  main .seccionForm {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    grid-template-areas: "formText" "form";
+  }
+}
+main .form {
+  grid-area: form;
+  padding: 1.5rem;
+  border: 1px solid #2C4122;
+  border-radius: 2px;
+}
+main .formText {
+  grid-area: formText;
+}
+
+/*FOOTER*/
+.footer {
+  display: grid;
+  align-items: stretch;
+  background-color: #F2FF57;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-columns: 1fr;
+  gap: 3rem 3rem;
+  grid-auto-flow: row;
+  grid-template-areas: "footerTitle footerTitle footerTitle" "footerA footerB footerC" "footerD footerD footerD";
+}
+
+@media (max-width: 576px) {
+  .footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-columns: 1fr;
+    gap: 3rem 3rem;
+    grid-auto-flow: row;
+    grid-template-areas: "footerTitle" "footerA" "footerB" "footerC" "footerD";
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-columns: 1fr;
+    gap: 3rem 3rem;
+    grid-auto-flow: row;
+    grid-template-areas: "footerTitle footerTitle" "footerA footerA" "footerB footerC" "footerD footerD";
+  }
+}
+.footerTitle {
+  grid-area: footerTitle;
+}
+
+.footerA {
+  grid-area: footerA;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.footerA p {
+  color: #2C4122;
+}
+.footerA h5 {
+  color: #2C4122;
+}
+
+@media (max-width: 576px) {
+  .footerA {
+    border-bottom: 1px solid #2C4122;
+    padding-bottom: 3rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footerA {
+    border-bottom: 1px solid #2C4122;
+    padding-bottom: 3rem;
+  }
+}
+.footerB {
+  grid-area: footerB;
+  padding-left: 1.5rem;
+  border-left: 1px solid #2C4122;
+}
+.footerB p {
+  color: #2C4122;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .footerB {
+    padding-left: 0%;
+    border-left: 0px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footerB {
+    padding-left: 0%;
+    border-left: 0px;
+  }
+}
+.footerC {
+  grid-area: footerC;
+  padding-left: 1.5rem;
+  border-left: 1px solid #2C4122;
+}
+.footerC p {
+  color: #2C4122;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .footerC {
+    padding-left: 0%;
+    border-left: 0px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footerC {
+    padding-left: 0%;
+    border-left: 0px;
+  }
+}
+.footerD {
+  grid-area: footerD;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid #2C4122;
+  padding-top: 3rem;
+}
+.footerD img {
+  height: 3rem;
+}
+
+/*# sourceMappingURL=style.css.map */

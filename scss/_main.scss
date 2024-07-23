@@ -1,0 +1,431 @@
+/*MAIN*/
+
+main {
+
+  .title {
+    @include padding-section;
+    @include flex-center;
+    height: 600px;
+    h1 {
+        text-align: center;
+        color: $primary;
+    }
+  }    
+
+  //* HEROSECTION
+
+  .herosection {
+    display: grid;
+    height: 100vh;
+    align-items: center;
+    @include padding-section;
+    background-image: url('../img/bgimg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 4px solid $secondary;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 24px 24px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "herosectionText herosectionImage";
+  }
+  @media (max-width: 576px) {
+    .herosection {
+      height: auto;
+      padding-top: 6rem;
+      text-align: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-auto-columns: 1fr;
+      grid-template-areas:
+        "herosectionText"
+        "herosectionImage";
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .herosection {
+      height: auto;
+      padding-top: 6rem;
+      text-align: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-auto-columns: 1fr;
+      grid-template-areas:
+        "herosectionText"
+        "herosectionImage";
+    }
+  }
+  
+  .herosectionText {
+    grid-area: herosectionText;
+    align-items: center;
+    row-gap: 2rem;
+    h1 {
+      color: $primary;
+    }
+    h5 {
+      color: $primary;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+    }
+  }
+  
+  .herosectionImage {
+    grid-area: herosectionImage;
+    @include flex-center;
+    img {
+      width: 100%;
+    }
+  }
+  
+  //* SECCIÓN EQUIPO
+
+  .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: stretch;
+      @include padding-section;
+      width: 100%;
+      gap: 24px 24px;
+      margin-top: $margin-md;
+      margin-bottom: $margin-xl;
+      .integrante {
+          display: grid;
+          width: 100%;
+          background-color: $tertiary;
+          padding: 1rem;
+          border: 1px solid $primary;
+          border-radius: 2px;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: auto auto auto auto 1fr auto auto;
+          gap: 0px 24px;
+          grid-auto-flow: row;
+          grid-template-areas:
+            "integrantePerfil space space"
+            "integranteNombre integranteNombre integranteNombre"
+            "integranteTitulo integranteTitulo integranteTitulo"
+            "line1 line1 line1"
+            "integranteDescription integranteDescription integranteDescription"
+            "line2 line2 line2"
+            "integranteContact integranteContact integranteCV";
+        }
+      @media (max-width: 576px) {
+          .integrante {
+              width: 100%;
+          }
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+          .integrante {
+              width: 45%;
+          }
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+          .integrante {
+              width: 45%;
+          }
+      }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+          .integrante {
+              width: 30%;
+          }
+      }
+      @media (min-width: 1200px) {
+          .integrante {
+              width: 30%;
+          }
+      }
+        
+        .integrantePerfil {
+          grid-area: integrantePerfil;
+              .imgperfil {
+                  height: 100px;
+                  width: 100px;
+                  object-fit: cover;
+                  object-position: center;
+                  margin-bottom: 0.5rem;
+                  border: 1px solid $primary;
+                  border-radius: 100%;
+                  filter: grayscale(100%);
+              }
+          }
+        
+        .space {
+          grid-area: space;
+          }
+        
+        .integranteNombre {
+          grid-area: integranteNombre;
+          }
+        
+        .integranteTitulo {
+          grid-area: integranteTitulo;
+          }
+        
+        .line1 {
+          grid-area: line1;
+          }
+        
+        .integranteDescription {
+          grid-area: integranteDescription;
+          align-self: stretch;
+          }
+        
+        .line2 {
+          grid-area: line2;
+          }
+        
+        .integranteContact {
+          grid-area: integranteContact;
+          }
+        
+        .integranteCV {
+          grid-area: integranteCV;
+          text-align: right;
+          }
+        
+  }
+
+  //* SECCIÓN ESTUDIANTES
+ 
+  .seccionEstudiantes {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    @include padding-section;
+    padding-top: $padding-xl;
+    padding-bottom: $padding-xl;
+    width: 100%;
+    margin-top: $margin-md;
+    background-color: $quaternary;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 24px 24px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "estudiantesTitle estudiantesTitle estudiantesTitle"
+      "estudiantesTexto listadoEstudiantes listadoEstudiantes"
+      "estudiantesTexto listadoEstudiantes listadoEstudiantes";
+  }
+
+  @media (max-width: 576px) {
+    .seccionEstudiantes {
+      grid-template-areas:
+      "estudiantesTitle estudiantesTitle estudiantesTitle"
+      "estudiantesTexto estudiantesTexto estudiantesTexto"
+      "listadoEstudiantes listadoEstudiantes listadoEstudiantes";
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .seccionEstudiantes {
+      grid-template-areas:
+      "estudiantesTitle estudiantesTitle estudiantesTitle"
+      "estudiantesTexto estudiantesTexto estudiantesTexto"
+      "listadoEstudiantes listadoEstudiantes listadoEstudiantes";
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .seccionEstudiantes {
+      grid-template-areas:
+      "estudiantesTitle estudiantesTitle estudiantesTitle"
+      "estudiantesTexto estudiantesTexto space"
+      "listadoEstudiantes listadoEstudiantes listadoEstudiantes";
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .seccionEstudiantes {
+      grid-template-areas:
+      "estudiantesTitle estudiantesTitle estudiantesTitle"
+      "estudiantesTexto listadoEstudiantes listadoEstudiantes"
+      "estudiantesTexto listadoEstudiantes listadoEstudiantes";
+    }
+  }
+  @media (min-width: 1200px) {
+    .seccionEstudiantes {
+      grid-template-areas:
+      "estudiantesTitle estudiantesTitle estudiantesTitle"
+      "estudiantesTexto listadoEstudiantes listadoEstudiantes"
+      "estudiantesTexto listadoEstudiantes listadoEstudiantes";
+    }
+  }
+
+  .seccionEstudiantesTitle {
+    grid-area: estudiantesTitle;
+    h2 {
+      color: $tertiary;
+      margin-bottom: 3rem;
+    }
+  }
+  
+  .seccionEstudiantesTexto {
+    grid-area: estudiantesTexto;
+    p {
+      color: $tertiary;
+      padding-bottom: 3rem;
+    }
+  }
+
+  .listadoEstudiantes {
+    grid-area: listadoEstudiantes;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 24px 24px;
+  }
+
+  .estudiante {
+    display: grid;
+    width: 45%;
+    background-color: $quaternary;
+    padding: 1rem;
+    border: 1px solid $secondary;
+    border-radius: 2px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 0px 24px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "estudiantePerfil space space"
+      "estudianteNombre estudianteNombre estudianteNombre"
+      "estudianteTitulo estudianteTitulo estudianteTitulo"
+      "line3 line3 line3"
+      "estudianteContact estudianteContact estudianteCV";
+    grid-area: estudiante;
+  }
+
+  @media (max-width: 576px) {
+    .estudiante {
+        width: 100%;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .estudiante {
+        width: 100%;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .estudiante {
+        width: 45%;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .estudiante {
+        width: 45%;
+    }
+  }
+  @media (min-width: 1200px) {
+    .estudiante {
+        width: 45%;
+    }
+  }
+  
+  .estudiantePerfil {
+    grid-area: estudiantePerfil;
+    .imgPerfilEstudiante {
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+      object-position: center;
+      margin-bottom: 0.5rem;
+      border: 1px solid $secondary;
+      border-radius: 100%;
+      filter: grayscale(100%);
+    }
+  }
+  
+  .space { grid-area: space; }
+  
+  .estudianteNombre {
+    grid-area: estudianteNombre;
+    h4 {
+      color: $secondary;
+    }
+  }
+  
+  .estudianteTitulo {
+    grid-area: estudianteTitulo;
+    p {
+      color: $tertiary;
+    }
+  }
+  
+  .line3 {
+    grid-area: line3;
+    hr {
+      color: $secondary;
+      border-width: 2px;
+    }
+    
+  }
+  
+  .estudianteContact { 
+    grid-area: estudianteContact;
+    a {
+      color: $tertiary;
+    }
+  }
+  
+  .estudianteCV {
+    grid-area: estudianteCV;
+    text-align: right;
+    a {
+      color: $tertiary;
+    }
+  }
+  
+  //* FORMULARIO
+
+  .seccionForm {
+    display: grid;
+    @include padding-section;
+    margin-bottom: $margin-lg;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 24px 24px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "formText form";
+  }
+  
+  @media (max-width: 576px) {
+    .seccionForm {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      grid-auto-columns: 1fr;
+      grid-auto-flow: column;
+      grid-template-areas:
+      "formText"
+      "form";
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .seccionForm {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      grid-auto-columns: 1fr;
+      grid-auto-flow: column;
+      grid-template-areas:
+      "formText"
+      "form";
+    }
+  }
+
+  .form {
+    grid-area: form;
+    padding: 1.5rem;
+    border: 1px solid $primary;
+    border-radius: 2px;
+  }
+  
+  .formText {
+    grid-area: formText;
+  }
+  
+}

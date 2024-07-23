@@ -1,0 +1,135 @@
+/*FOOTER*/
+
+.footer {
+  display: grid;
+  align-items: stretch;
+  background-color: $secondary;
+  @include padding-section;
+  padding-top: $padding-xl;
+  padding-bottom: $padding-xl;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-columns: 1fr;
+  gap: 3rem 3rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "footerTitle footerTitle footerTitle"
+    "footerA footerB footerC"
+    "footerD footerD footerD";
+}
+
+@media (max-width: 576px) {
+  .footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-columns: 1fr;
+    gap: 3rem 3rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "footerTitle"
+    "footerA"
+    "footerB"
+    "footerC"
+    "footerD";
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-columns: 1fr;
+    gap: 3rem 3rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "footerTitle footerTitle"
+    "footerA footerA"
+    "footerB footerC"
+    "footerD footerD";
+  }
+}
+
+.footerTitle {
+  grid-area: footerTitle;
+}
+
+.footerA {
+  grid-area: footerA;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  p {
+    color: $primary;
+  }
+  h5 {
+    color: $primary;
+  }
+}
+@media (max-width: 576px) {
+  .footerA {
+    border-bottom: 1px solid $primary;
+    padding-bottom: 3rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footerA {
+    border-bottom: 1px solid $primary;
+    padding-bottom: 3rem;
+  }
+}
+
+.footerB {
+  grid-area: footerB;
+  padding-left: $padding-md;
+  border-left: 1px solid $primary;
+  p {
+    color: $primary;
+    margin-bottom: $margin-md;
+  }
+}
+@media (max-width: 576px) {
+  .footerB {
+    padding-left: 0%;
+    border-left: 0px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footerB {
+    padding-left: 0%;
+    border-left: 0px;
+  }
+}
+
+.footerC {
+  grid-area: footerC;
+  padding-left: $padding-md;
+  border-left: 1px solid $primary;
+  p {
+    color: $primary;
+    margin-bottom: $margin-md;
+  }
+}
+@media (max-width: 576px) {
+  .footerC {
+    padding-left: 0%;
+    border-left: 0px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footerC {
+    padding-left: 0%;
+    border-left: 0px;
+  }
+}
+
+.footerD {
+  grid-area: footerD;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid $primary;
+  padding-top: 3rem;
+  img {
+    height: 3rem;
+  }
+}
