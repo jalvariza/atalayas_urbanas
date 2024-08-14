@@ -7,16 +7,17 @@
   }
 
 body {
-  background-color: $white;
+  background-color: $background;
   ul {
     list-style: none;
+    align-items: left;
     padding: 0px;
     margin-bottom: 0px;
     li {
-      display: flex;
       align-items: center;
       column-gap: 0.5rem;
       padding-top: 0.5rem;
     }
   }
 }
+

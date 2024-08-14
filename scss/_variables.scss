@@ -1,14 +1,31 @@
 /*COLORS*/
 
-$primary: #2C4122;
-$secondary: #F2FF57;
-$tertiary: #EBEBE0;
-$quaternary: #223A3F;
-$black: #0A1207;
-$white: #EDF3EE;
+$primary: #245441;
+$secondary: #BBD7E9;
+$tertiary: #F5F5F2;
+
+/*brand*/
+
+$black: #221F20;
+$grey: #cbccc3;
+$white: #fefefe;
+$background: #F5F5F2;
+
+$blue: #1751A1;
+$bluelight: #BBD7E9;
+$green: #245441;
+$greenlight: #60907D;
+$violet: #4A1C78;
+$violetlight: #CEB4C6;
+$yellow: #DCC887;
+$yellowlight: #FFFFC3;
+$red: #65353C;
+$redlight: #A17178;
+
+/*information*/
 
 $success: #198754;
-$info: #6F42C1;
+$info: #4251c1;
 $warning: #FFC107;
 $danger: #DC3545;
     
@@ -53,7 +70,18 @@ $padding-xl: 4.5rem;
     animation-duration: 1.5s;
 }
 
+.fade-in2 {
+    animation: fade-in;
+    animation-duration: 3s;
+}
+
 @keyframes fade-in {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+/*LINE*/
+
+hr {
+    border: 1px solid $black;
 }

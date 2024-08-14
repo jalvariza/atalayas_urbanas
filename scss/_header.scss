@@ -1,5 +1,14 @@
 /*HEADER*/
 
 .navbar {
-  background-color: $white;
+  background-color: $background;
+  ul {
+    list-style: none;
+    align-items: left;
+    margin-bottom: 0px;
+    li {
+      column-gap: 0.5rem;
+      padding-top: 0.5rem;
+    }
+  }
 }

@@ -3,7 +3,7 @@
 .footer {
   display: grid;
   align-items: stretch;
-  background-color: $secondary;
+  background-color: $primary;
   @include padding-section;
   padding-top: $padding-xl;
   padding-bottom: $padding-xl;
@@ -50,6 +50,9 @@
 
 .footerTitle {
   grid-area: footerTitle;
+  .logo {
+    color: $background;
+  }
 }
 
 .footerA {
@@ -58,21 +61,21 @@
   flex-direction: column;
   row-gap: 1.5rem;
   p {
-    color: $primary;
+    color: $background;
   }
   h5 {
-    color: $primary;
+    color: $background;
   }
 }
 @media (max-width: 576px) {
   .footerA {
-    border-bottom: 1px solid $primary;
+    border-bottom: 1px solid $background;
     padding-bottom: 3rem;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   .footerA {
-    border-bottom: 1px solid $primary;
+    border-bottom: 1px solid $background;
     padding-bottom: 3rem;
   }
 }
@@ -80,10 +83,13 @@
 .footerB {
   grid-area: footerB;
   padding-left: $padding-md;
-  border-left: 1px solid $primary;
+  border-left: 1px solid $background;
   p {
-    color: $primary;
+    color: $background;
     margin-bottom: $margin-md;
+  }
+  a {
+    color: $background;
   }
 }
 @media (max-width: 576px) {
@@ -102,12 +108,19 @@
 .footerC {
   grid-area: footerC;
   padding-left: $padding-md;
-  border-left: 1px solid $primary;
+  border-left: 1px solid $background;
   p {
-    color: $primary;
+    color: $background;
     margin-bottom: $margin-md;
   }
+  a {
+    color: $background;
+  }
+  i {
+    color: $background;
+  }
 }
+
 @media (max-width: 576px) {
   .footerC {
     padding-left: 0%;
@@ -127,9 +140,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 24px;
-  border-top: 1px solid $primary;
+  border-top: 1px solid $background;
   padding-top: 3rem;
   img {
     height: 3rem;
+    color: $background;
   }
 }

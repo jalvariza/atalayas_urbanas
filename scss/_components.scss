@@ -34,9 +34,27 @@
 }
 .buttonSecondary:hover {
     background-color: $tertiary;
-    color: $quaternary;
-    border: 1px solid $quaternary;
+    color: $black;
+    border: 1px solid $black;
 }
+
+#backToTop {
+    position: fixed; 
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: $background;
+    color: $primary;
+    border: 1px solid $primary;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+  }
+  
+  #backToTop:hover {
+    background-color: $secondary;
+  }
 
 
 //*FORM CONTROL*//
@@ -54,3 +72,6 @@
     border: 1px solid $primary;
     box-shadow: 0px 0px 0px 3px $secondary;
 }
+
+//*CARDS*//
+
