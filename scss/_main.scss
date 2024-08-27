@@ -37,6 +37,7 @@ main {
   @media (max-width: 576px) {
     .herosection {
       height: auto;
+      background-image: none;
       padding-top: 6rem;
       text-align: center;
       grid-template-columns: 1fr;
@@ -51,6 +52,7 @@ main {
   @media (min-width: 576px) and (max-width: 767.98px) {
     .herosection {
       height: auto;
+      background-image: none;
       padding-top: 6rem;
       text-align: center;
       grid-template-columns: 1fr;
