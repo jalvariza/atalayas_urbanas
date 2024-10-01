@@ -13,11 +13,18 @@
     font-size: 1rem;
     cursor: pointer;
     border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
 }
+
 .buttonPrimary:hover {
     background-color: $secondary;
     color: $primary;
     border: 1px solid $primary;
+    transform: translateY(-2px);
+}
+
+.buttonPrimary:active {
+    transform: translateY(2px) scale(0.98);
 }
 
 .buttonSecondary {
@@ -31,11 +38,18 @@
     font-size: 1rem;
     cursor: pointer;
     border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
 }
+
 .buttonSecondary:hover {
     background-color: $tertiary;
     color: $black;
     border: 1px solid $black;
+    transform: translateY(-2px);
+}
+
+.buttonSecondary:active {
+    transform: translateY(2px) scale(0.98);
 }
 
 #backToTop {
@@ -50,12 +64,45 @@
     cursor: pointer;
     display: none;
     z-index: 1000;
-  }
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
   
-  #backToTop:hover {
+#backToTop:hover {
     background-color: $secondary;
-  }
+    transform: translateY(-2px);
+}
 
+#backToTop:active {
+    transform: translateY(2px) scale(0.98);
+}
+
+.buttonAccion {
+    background-color: $primary;
+    color: $secondary;
+    border: 1px solid $primary;
+    padding: $padding-sm $padding-md;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+}
+
+.buttonAccion:hover {
+    background-color: $secondary;
+    color: $primary;
+    border: 1px solid $primary;
+    transform: translateY(-2px);
+}
+
+.buttonAccion:active {
+    transform: translateY(2px) scale(0.98);
+}
 
 //*FORM CONTROL*//
 
@@ -74,4 +121,6 @@
 }
 
 //*CARDS*//
+
+
 
