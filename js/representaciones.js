@@ -3,12 +3,12 @@
 const representaciones = [
     {
         imagen: "./img/representaciones/01_Besnes.jpg",
-        titulo: "",
+        titulo: "Vista de oeste de la ciudad de Montevideo sacada del mirador de la casa de Dn. Juan Ma. Perez.",
         tipo: "Acuarela y tinta sobre papel, 53 x 32cm",
         autor: "Juan Manuel Besnes e Irigoyen",
         nacionalidad: "Español",
         fecha: "1848",
-        descripcion: "Vista de oeste de la ciudad de Montevideo sacada del mirador de la casa de Dn. Juan Ma. Perez.",
+        descripcion: "",
         fuente: "Museo Histórico Nacional, Uruguay",
     },
     {
