@@ -1,6 +1,6 @@
 // ARRAY de REPRESENTACIONES
 
-export const representaciones = [
+const representaciones = [
 
     {
         imagen: "./img/representaciones/01_Besnes.jpg",
