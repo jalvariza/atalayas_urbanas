@@ -1,6 +1,7 @@
 // ARRAY de REPRESENTACIONES
 
-const representaciones = [
+export const representaciones = [
+
     {
         imagen: "./img/representaciones/01_Besnes.jpg",
         titulo: "Vista de oeste de la ciudad de Montevideo sacada del mirador de la casa de Dn. Juan Ma. Perez.",
