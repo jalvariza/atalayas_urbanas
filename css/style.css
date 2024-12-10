@@ -474,6 +474,8 @@ main .cards .cardImg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: solid 1px #245441;
+  border-radius: 2px;
 }
 main .cards .cardImg .cardTxt {
   grid-area: cardTxt;
@@ -495,7 +497,14 @@ main .indexRepresentaciones {
   gap: 24px 24px;
   grid-template-areas: "indexRepresentacionesTitle indexRepresentacionesTitle" "indexRepresentacionesImg indexRepresentacionesInfo" "indexRepresentacionesImg indexRepresentacionesBtn";
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1024px) {
+  main .indexRepresentaciones {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: "indexRepresentacionesTitle" "indexRepresentacionesImg" "indexRepresentacionesInfo" "indexRepresentacionesBtn";
+  }
+}
+@media (max-width: 768px) {
   main .indexRepresentaciones {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr auto;
@@ -519,19 +528,31 @@ main .indexRepresentacionesImg {
   opacity: 0;
   transform: translateY(20px);
   transition: transform 0.4s ease, opacity 0.4s ease;
+  border: none;
 }
 main .indexRepresentacionesImg.active {
   opacity: 1;
   transform: translateY(0);
 }
+@media (max-width: 768px) {
+  main .indexRepresentacionesImg {
+    height: auto;
+  }
+}
 main .indexRepresentacionesImg img {
-  width: auto;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 450px;
+  height: auto;
+  object-fit: contain;
   display: block;
   border: 2px solid #245441;
   border-radius: 8px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+  main .indexRepresentacionesImg img {
+    max-height: 350px;
+  }
 }
 main .indexRepresentacionesInfo {
   grid-area: indexRepresentacionesInfo;
@@ -543,7 +564,6 @@ main .indexRepresentacionesInfo {
   flex-direction: column;
   justify-content: space-between;
   opacity: 1;
-  transform: translateY(20px);
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 main .indexRepresentacionesInfo.active {
@@ -555,7 +575,7 @@ main .indexRepresentacionesBtn {
   align-self: end;
   display: flex;
   justify-content: center;
-  height: 60px;
+  height: 52px;
 }
 main .buttonAccion {
   background-color: #245441;
