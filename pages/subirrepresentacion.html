@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Representación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Subir Nueva Representación</h1>
+    <div class="subirrepresentacion">
+        <form id="form-representacion">
+            <label for="imagen">Imagen (nombre del archivo):</label>
+            <input type="text" id="imagen" name="imagen" required placeholder="Ejemplo: 05_nuevaimagen.jpg">
+
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Título de la representación">
+
+            <label for="tipo">Tipo:</label>
+            <input type="text" id="tipo" name="tipo" required placeholder="Ejemplo: Fotografía, Pintura, etc.">
+
+            <label for="autor">Autor:</label>
+            <input type="text" id="autor" name="autor" placeholder="Autor de la representación">
+
+            <label for="nacionalidad">Nacionalidad:</label>
+            <input type="text" id="nacionalidad" name="nacionalidad" placeholder="Nacionalidad del autor">
+
+            <label for="fecha">Fecha:</label>
+            <input type="text" id="fecha" name="fecha" placeholder="Fecha de la representación">
+
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" rows="4"
+                placeholder="Descripción de la representación"></textarea>
+
+            <label for="fuente">Fuente:</label>
+            <input type="text" id="fuente" name="fuente" required placeholder="Fuente o referencia">
+
+            <button type="submit">Agregar Representación</button>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="representaciones.js"></script>
+
+</body>
+
+</html>
