@@ -61,7 +61,7 @@ hr {
 p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.15rem;
   line-height: 150%;
   color: #221F20;
   text-align: left;
@@ -71,7 +71,7 @@ p {
 h6 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.15rem;
   line-height: 120%;
 }
 
@@ -434,6 +434,11 @@ main .herosectionImage {
 main .herosectionImage img {
   width: 100%;
 }
+main .card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 main .cards {
   display: flex;
   flex-wrap: wrap;
@@ -453,10 +458,13 @@ main .cards .card {
   padding: 1.5rem;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  grid-auto-columns: 1fr;
   gap: 16px 24px;
-  grid-auto-flow: row;
   grid-template-areas: "cardImg" "cardTxt";
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+main .cards .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 768px) {
   main .cards .card {
@@ -477,7 +485,7 @@ main .cards .cardImg img {
   border: solid 1px #245441;
   border-radius: 2px;
 }
-main .cards .cardImg .cardTxt {
+main .cards .cardTxt {
   grid-area: cardTxt;
 }
 main .indexRepresentaciones {
@@ -598,6 +606,48 @@ main .buttonAccion:hover {
   color: #245441;
   border: 1px solid #245441;
 }
+main .banner {
+  display: grid;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #245441;
+  align-items: center;
+  border-top: 2px solid #BBD7E9;
+  border-bottom: 2px solid #BBD7E9;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 0px 24px;
+  grid-template-areas: "bannerimg bannertxt";
+}
+@media (max-width: 768px) {
+  main .banner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "bannerimg" "bannertxt";
+    text-align: center;
+  }
+  main .banner .bannertxt p {
+    text-align: center; /* Solo centra el párrafo en pantallas pequeñas */
+  }
+}
+main .bannerimg {
+  grid-area: bannerimg;
+  display: flex;
+  justify-content: center;
+}
+main .bannerimg img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+main .bannertxt {
+  grid-area: bannertxt;
+}
+main .bannertxt h2, main .bannertxt h4, main .bannertxt p {
+  color: #BBD7E9;
+}
 main .blog {
   display: grid;
   padding-left: 5%;
@@ -656,13 +706,13 @@ main .blogContent .quote {
   color: #245441;
   padding-bottom: 4rem;
 }
-main .blogContent p {
+main .blogContent > p {
   padding-bottom: 1rem;
   color: #221F20;
 }
-main .blogContent h4 {
+main .blogContent > h4 {
   color: #245441;
-  padding-top: 6rem;
+  padding-top: 4rem;
   padding-bottom: 2rem;
 }
 main .blogContent .carousel-inner {
@@ -685,6 +735,72 @@ main .blogContent .cardtxtimportant {
   border: 1px solid #BBD7E9;
   border-radius: 4px;
   color: #F5F5F2;
+}
+main .cardBlog-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+main .cardsBlog {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 24px;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+main .cardBlog {
+  border: solid 2px #245441;
+  border-radius: 4px;
+  display: grid;
+  padding: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 24px;
+  grid-template-areas: "cardBlogImg cardBlogTxt";
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+main .cardBlog:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  main .cardBlog {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 16px;
+    grid-template-areas: "cardBlogImg" "cardBlogTxt";
+  }
+}
+main .cardBlogImg {
+  grid-area: cardBlogImg;
+}
+main .cardBlogImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: solid 1px #245441;
+  border-radius: 2px;
+}
+main .cardBlogTxt {
+  grid-area: cardBlogTxt;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+main .cardBlogTxt h4 {
+  color: #245441;
+  margin: 0;
+}
+main .cardBlogTxt hr {
+  width: 100%;
+  margin: 16px 0;
+  border: none;
+  height: 2px;
+  background-color: #245441;
 }
 main .team {
   display: flex;
