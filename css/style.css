@@ -708,16 +708,17 @@ main .aside .menuAside {
 main .blogContent {
   grid-area: blogContent;
   margin-bottom: 3rem;
+  padding: 1.5rem;
 }
 main .blogContent .quote {
   color: #245441;
   padding-bottom: 4rem;
 }
-main .blogContent > p {
+main .blogContent p {
   padding-bottom: 1rem;
   color: #221F20;
 }
-main .blogContent > h4 {
+main .blogContent h4 {
   color: #245441;
   padding-top: 4rem;
   padding-bottom: 2rem;

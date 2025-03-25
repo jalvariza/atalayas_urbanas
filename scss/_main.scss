@@ -419,18 +419,19 @@ main {
   .blogContent {
     grid-area: blogContent;
     margin-bottom: 3rem;
+    padding: $padding-md;
 
     .quote {
       color: $green;
       padding-bottom: 4rem;
     }
 
-    >p {
+    p {
       padding-bottom: 1rem;
       color: $black;
     }
 
-    >h4 {
+    h4 {
       color: $green;
       padding-top: 4rem;
       padding-bottom: 2rem;
