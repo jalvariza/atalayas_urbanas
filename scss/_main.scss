@@ -116,7 +116,6 @@ main {
       padding: $padding-md;
       grid-template-columns: 1fr;
       grid-template-rows: auto auto;
-      gap: 16px 24px;
       grid-template-areas:
         "cardImg"
         "cardTxt";
@@ -129,9 +128,8 @@ main {
 
       @media (max-width: 768px) {
         width: 100%;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
-        gap: 16px 24px;
         grid-template-areas:
           "cardImg cardTxt";
       }
@@ -139,10 +137,13 @@ main {
 
     .cardImg {
       grid-area: cardImg;
+      max-width: 100%;
+      overflow: hidden;
 
       img {
         width: 100%;
-        height: 100%;
+        height: auto;
+        display: block;
         object-fit: cover;
         border: solid 1px $primary;
         border-radius: 2px;
@@ -151,6 +152,7 @@ main {
 
     .cardTxt {
       grid-area: cardTxt;
+      padding-top: 1rem;
     }
   }
 
@@ -321,13 +323,14 @@ main {
         "bannertxt";
       text-align: center;
       .bannertxt p {
-        text-align: center;  /* Solo centra el párrafo en pantallas pequeñas */
+        text-align: center;
     } 
     }
   }
   
   .bannerimg {
     grid-area: bannerimg;
+    width: 100%;
     display: flex;
     justify-content: center;
   }
@@ -335,7 +338,8 @@ main {
   .bannerimg img {
     width: 100%;
     height: auto;
-    max-width: 100%;
+    display: block;
+    object-fit: cover;
   }
   
   .bannertxt {

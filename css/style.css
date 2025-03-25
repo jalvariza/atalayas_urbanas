@@ -76,9 +76,9 @@ h6 {
 }
 
 h5 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 1.25rem;
+  font-family: "Platypi", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
   line-height: 120%;
 }
 
@@ -458,7 +458,6 @@ main .cards .card {
   padding: 1.5rem;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  gap: 16px 24px;
   grid-template-areas: "cardImg" "cardTxt";
   transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -469,24 +468,27 @@ main .cards .card:hover {
 @media (max-width: 768px) {
   main .cards .card {
     width: 100%;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 16px 24px;
     grid-template-areas: "cardImg cardTxt";
   }
 }
 main .cards .cardImg {
   grid-area: cardImg;
+  max-width: 100%;
+  overflow: hidden;
 }
 main .cards .cardImg img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
   object-fit: cover;
   border: solid 1px #245441;
   border-radius: 2px;
 }
 main .cards .cardTxt {
   grid-area: cardTxt;
+  padding-top: 1rem;
 }
 main .indexRepresentaciones {
   display: grid;
@@ -629,18 +631,20 @@ main .banner {
     text-align: center;
   }
   main .banner .bannertxt p {
-    text-align: center; /* Solo centra el párrafo en pantallas pequeñas */
+    text-align: center;
   }
 }
 main .bannerimg {
   grid-area: bannerimg;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 main .bannerimg img {
   width: 100%;
   height: auto;
-  max-width: 100%;
+  display: block;
+  object-fit: cover;
 }
 main .bannertxt {
   grid-area: bannertxt;
