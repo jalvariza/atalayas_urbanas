@@ -82,56 +82,59 @@ h5 {
   line-height: 120%;
 }
 
-h4 {
-  font-family: "Platypi", sans-serif;
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 120%;
+:root {
+  --h1-size: 5rem;
+  --h2-size: 4rem;
+  --h3-size: 3.25rem;
+  --h4-size: 2rem;
 }
 
-h3 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 3.25rem;
-  line-height: 120%;
-}
-
-h2 {
-  font-family: "Platypi", sans-serif;
-  font-weight: 300;
-  font-size: 4rem;
-  line-height: 110%;
-  color: #221F20;
-}
-
-@media (max-width: 576px) {
-  h2 {
-    font-size: 3rem;
+@media (max-width: 767.98px) {
+  :root {
+    --h1-size: 4rem;
+    --h2-size: 2rem;
+    --h3-size: 2.75rem;
+    --h4-size: 1.75rem;
   }
 }
-@media (min-width: 576px) and (max-width: 767.98px) {
-  h2 {
-    font-size: 2rem;
+@media (max-width: 576px) {
+  :root {
+    --h1-size: 3.5rem;
+    --h2-size: 2rem; /* Se mantiene, según tu configuración */
+    --h3-size: 2.5rem;
+    --h4-size: 1.5rem;
   }
 }
 h1 {
   font-family: "Platypi", sans-serif;
   font-weight: 200;
-  font-size: 5rem;
+  font-size: var(--h1-size);
   line-height: 105%;
   color: #221F20;
 }
 
-@media (max-width: 576px) {
-  h1 {
-    font-size: 3.5rem;
-  }
+h2 {
+  font-family: "Platypi", sans-serif;
+  font-weight: 300;
+  font-size: var(--h2-size);
+  line-height: 110%;
+  color: #221F20;
 }
-@media (min-width: 576px) and (max-width: 767.98px) {
-  h1 {
-    font-size: 4rem;
-  }
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: var(--h3-size);
+  line-height: 120%;
 }
+
+h4 {
+  font-family: "Platypi", sans-serif;
+  font-weight: 600;
+  font-size: var(--h4-size);
+  line-height: 120%;
+}
+
 .quote {
   font-family: "Platypi", sans-serif;
   font-style: italic;
@@ -420,7 +423,7 @@ main .herosectionText {
 main .herosectionText h1 {
   color: #245441;
 }
-main .herosectionText h5 {
+main .herosectionText p {
   color: #245441;
   padding-top: 2rem;
   padding-bottom: 1rem;
