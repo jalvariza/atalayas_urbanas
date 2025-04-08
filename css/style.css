@@ -367,7 +367,7 @@ main .title {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  height: 500px;
 }
 main .title h1 {
   text-align: center;
@@ -569,6 +569,7 @@ main .indexRepresentacionesImg img {
 }
 main .indexRepresentacionesInfo {
   grid-area: indexRepresentacionesInfo;
+  height: 100%;
   padding: 1rem;
   border: 2px solid #245441;
   border-radius: 8px;
@@ -705,6 +706,15 @@ main .aside .menuAside {
   top: 6rem;
   padding-bottom: 3rem;
 }
+main .asideRight {
+  grid-area: asideRight;
+  overflow: visible;
+}
+main .asideRight .menuAside {
+  position: sticky;
+  top: 6rem;
+  padding-bottom: 3rem;
+}
 main .blogContent {
   grid-area: blogContent;
   margin-bottom: 3rem;
@@ -744,25 +754,45 @@ main .blogContent .cardtxtimportant {
   border-radius: 4px;
   color: #F5F5F2;
 }
+main .blogpage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+  gap: 24px;
+  margin-top: 1.5rem;
+  margin-bottom: 4.5rem;
+}
 main .cardBlog-link {
   text-decoration: none;
   color: inherit;
   display: block;
 }
 main .cardsBlog {
+  width: calc(50% - 16px);
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: stretch;
-  gap: 24px;
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
+  justify-content: center;
+}
+@media (max-width: 992px) {
+  main .cardsBlog {
+    width: calc(50% - 16px);
+  }
+}
+@media (max-width: 576px) {
+  main .cardsBlog {
+    width: 100%;
+  }
 }
 main .cardBlog {
   border: solid 2px #245441;
   border-radius: 4px;
   display: grid;
+  height: 100%;
   padding: 1.5rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
