@@ -5,7 +5,7 @@ main {
   .title {
     @include padding-section;
     @include flex-center;
-    height: 600px;
+    height: 500px;
 
     h1 {
       text-align: center;
@@ -250,6 +250,7 @@ main {
 
   .indexRepresentacionesInfo {
     grid-area: indexRepresentacionesInfo;
+    height: 100%;
     padding: 1rem;
     border: 2px solid $primary;
     border-radius: 8px;
@@ -416,6 +417,17 @@ main {
     }
   }
 
+  .asideRight {
+    grid-area: asideRight;
+    overflow: visible;
+
+    .menuAside {
+      position: sticky;
+      top: 6rem;
+      padding-bottom: 3rem;
+    }
+  }
+
   .blogContent {
     grid-area: blogContent;
     margin-bottom: 3rem;
@@ -463,6 +475,21 @@ main {
   }
 
 
+  //* BLOGPAGE ---------------------------------
+
+  .blogpage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    @include padding-section;
+    width: 100%;
+    gap: 24px;
+    margin-top: $margin-md;
+    margin-bottom: $margin-xl;
+  }
+
+
   //* SECCIÓN ENTRADAS BLOG --------------------
 
   .cardBlog-link {
@@ -472,20 +499,26 @@ main {
   }
   
   .cardsBlog {
+    width: calc(50% - 16px);
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: stretch;
-    gap: 24px;
-    padding-top: $padding-xl;
-    padding-bottom: $padding-xl;
+    justify-content: center;
+  
+    @media (max-width: 992px) {
+      width: calc(50% - 16px);
+    }
+  
+    @media (max-width: 576px) {
+      width: 100%;
+    }
   }
   
   .cardBlog {
     border: solid 2px $primary;
     border-radius: 4px;
     display: grid;
+    height: 100%;
     padding: $padding-md;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
